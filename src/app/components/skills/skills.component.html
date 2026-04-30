@@ -1,0 +1,12 @@
+<section class="section" id="skills">
+  <div class="section-header">
+    <span class="eyebrow">Stack técnico</span>
+    <h2>Tecnologías que uso para construir soluciones completas.</h2>
+  </div>
+  <div class="skill-grid">
+    <div class="skill-card card" *ngFor="let group of groups">
+      <h3>{{ group.title }}</h3>
+      <div class="badges"><span class="badge" *ngFor="let item of group.items">{{ item }}</span></div>
+    </div>
+  </div>
+</section>

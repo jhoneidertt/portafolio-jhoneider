@@ -1,0 +1,25 @@
+<section class="section" id="projects">
+  <div class="section-header">
+    <span class="eyebrow">Casos reales</span>
+    <h2>Proyectos enfocados en backend, datos y automatización.</h2>
+  </div>
+
+  <article *ngFor="let project of projects" class="project-card card reveal" [class.featured]="project.featured">
+    <div class="project-top">
+      <div>
+        <span class="category">{{ project.category }} · {{ project.period }}</span>
+        <h3>{{ project.title }}</h3>
+      </div>
+      <span *ngIf="project.featured" class="star">Proyecto estrella</span>
+    </div>
+    <p class="description">{{ project.description }}</p>
+    <div class="details">
+      <div><strong>Problema</strong><p>{{ project.problem }}</p></div>
+      <div><strong>Solución</strong><p>{{ project.solution }}</p></div>
+      <div><strong>Impacto</strong><p>{{ project.impact }}</p></div>
+    </div>
+    <div class="badges">
+      <span class="badge" *ngFor="let tech of project.technologies">{{ tech }}</span>
+    </div>
+  </article>
+</section>
