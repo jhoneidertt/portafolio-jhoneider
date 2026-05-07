@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portafolio-jhoneider-angular": {
+    "portafolio-jhoneider": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": { "style": "scss" }
@@ -15,7 +15,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/portafolio-jhoneider-angular",
+            "outputPath": "dist/portafolio-jhoneider",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -44,8 +44,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "production": { "buildTarget": "portafolio-jhoneider-angular:build:production" },
-            "development": { "buildTarget": "portafolio-jhoneider-angular:build:development" }
+            "production": { "buildTarget": "portafolio-jhoneider:build:production" },
+            "development": { "buildTarget": "portafolio-jhoneider:build:development" }
           },
           "defaultConfiguration": "development"
         }

@@ -1,0 +1,73 @@
+.intro-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(56, 189, 248, 0.14), transparent 34%),
+    #07111f;
+  color: #e5eefb;
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 400ms ease, visibility 400ms ease;
+}
+
+.intro-loader--leaving {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.intro-loader__content {
+  display: grid;
+  gap: 12px;
+  text-align: center;
+  animation: introTextIn 900ms ease both;
+}
+
+.intro-loader__eyebrow {
+  margin: 0;
+  color: #38bdf8;
+  font-size: clamp(0.78rem, 2vw, 0.9rem);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.intro-loader h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 10vw, 6rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.intro-loader__subtitle {
+  margin: 0;
+  color: #94a3b8;
+  font-size: clamp(1rem, 3vw, 1.45rem);
+  font-weight: 600;
+}
+
+@keyframes introTextIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-loader,
+  .intro-loader__content {
+    animation: none;
+    transition: opacity 160ms ease, visibility 160ms ease;
+  }
+}
