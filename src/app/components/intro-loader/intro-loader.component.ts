@@ -13,8 +13,8 @@ export class IntroLoaderComponent implements OnInit, OnDestroy {
   isLeaving = false;
 
   private readonly storageKey = 'jhoneider_intro_loader_seen';
-  private readonly exitDelay = 2100;
-  private readonly removeDelay = 2500;
+  private readonly exitDelay = 3200;
+  private readonly removeDelay = 3800;
   private exitTimer?: ReturnType<typeof setTimeout>;
   private removeTimer?: ReturnType<typeof setTimeout>;
 
